@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UrnasController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +21,18 @@ Route::get('/', function () {
 Route::get('/index', function () {
     return view('home');
 });
+
+/*
+|--------------------------------------------------------------------------
+| Urnas
+|--------------------------------------------------------------------------
+| Aquí están todas las rutas necesarias para controlar la tabla "urnas".
+| El orden de las rutas es importante (Programación defensiva). Por el
+| momento ordenaré las rutas por aparición en su acrónimo CRUD:
+| (CREATE, READ, UPDATE, DELETE)
+|
+*/
+
+/* Read */
+Route::get('/urnas', [UrnasController::class, 'index']);
+Route::get('/urnas/index', [UrnasController::class, 'index']);

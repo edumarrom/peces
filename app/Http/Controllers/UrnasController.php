@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Urna;
 
-class UrnaController extends Controller
+class UrnasController extends Controller
 {
     public function index()
     {

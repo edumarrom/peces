@@ -13,13 +13,14 @@ class CreateUrnasTable extends Migration
      */
     public function up()
     {
+        /* ->nullable() */
         Schema::create('urnas', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
-            $table->decimal('ancho', 5, 2);
-            $table->decimal('alto', 5, 2);
-            $table->decimal('profundo', 5, 2);
-            $table->decimal('grosor', 2, 1);
+            $table->decimal('ancho', 4, 1);
+            $table->decimal('alto', 4, 1);
+            $table->decimal('profundo', 4, 1);
+            $table->decimal('grosor', 2, 1)->nullable();
             $table->timestamps();
         });
     }
